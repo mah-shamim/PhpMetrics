@@ -6,22 +6,11 @@ use Hal\Component\Output\Output;
 use Hal\Metric\Consolidated;
 use Hal\Metric\Metrics;
 use Hal\Report\ReporterInterface;
-use function array_map;
-use function count;
-use function end;
-use function file_exists;
-use function file_get_contents;
-use function glob;
-use function json_decode;
-use function json_encode;
-use function mkdir;
-use function recurse_copy;
-use const JSON_PRETTY_PRINT;
 
 /**
  * This class takes care about the global report in HTML of consolidated metrics.
  */
-final class Reporter implements ReporterInterface
+class Reporter implements ReporterInterface
 {
     /** @var Config */
     private $config;
